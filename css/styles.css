@@ -20,3 +20,8 @@ h1 {
 .space {
     margin-left: 20px;
 }
+
+.block {
+    border-top: 1px solid rgba(158, 158, 158, 0.5);
+    margin-top: 20px;
+}
