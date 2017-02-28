@@ -1,0 +1,27 @@
+h1{
+    font-weight: bold;
+}
+#face{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000000;
+    margin: auto;
+    display: block;
+}
+.bold{
+    font-weight: bold;
+}
+.wrapper{
+    font-size: 20px;
+    width: 70%;
+    margin: auto;
+}
+hr{
+    border: none;
+    color: rgba(158, 158, 158, 0.5);
+    background-color: rgba(158, 158, 158, 0.5);
+    height: 1px;
+}
+.space{
+    margin-left: 20px;
+}
