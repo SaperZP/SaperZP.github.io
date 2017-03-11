@@ -2,7 +2,7 @@ body {
     background-color: #f9f9f9;
 }
 
-h1{
+h1 {
     margin-bottom: 50px;
     font-size: 60px;
 }
@@ -10,7 +10,7 @@ h1{
 #wrapper {
     position: relative;
     width: 70%;
-    height: 120vh;
+    height: 130vh;
     box-sizing: border-box;
     margin: auto;
     padding: 50px;
@@ -48,7 +48,7 @@ footer ul {
     padding: 50px 50px 0 0;
 }
 
-.sideBar tr:hover{
+.sideBar tr:hover {
     background-color: rgba(247, 247, 245, 0.8);
 }
 
@@ -74,10 +74,11 @@ td {
     font-family: 'Open Sans', sans-serif;
 }
 
-#text p{
+#text p {
     width: calc(100% - 400px);
-    margin: 0px 54px;
+    margin: 0 54px;
     float: right;
+    line-height: 23px;
 }
 
 footer {
@@ -100,7 +101,7 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover{
+footer a:hover {
     text-decoration: underline;
 }
 
