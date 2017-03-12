@@ -3,14 +3,19 @@ body {
 }
 
 h1 {
-    margin-bottom: 50px;
     font-size: 60px;
+    margin-bottom: 30px;
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
 }
 
 #wrapper {
     position: relative;
-    width: 70%;
-    height: 130vh;
+    width: 1060px;
+    min-height: 100vh;
     box-sizing: border-box;
     margin: auto;
     padding: 50px;
@@ -20,18 +25,18 @@ h1 {
 
 }
 
-div.navBar {
+div#navBar {
     height: 48px;
     background-color: #5a5d5f;
 }
 
-.navBar ul,
+#navBar ul,
 footer ul {
     padding: 0;
     margin: 0;
 }
 
-.navBar li {
+#navBar li {
     display: inline-block;
     height: 18px;
     width: 11%;
@@ -39,16 +44,17 @@ footer ul {
     color: #ffffff;
 }
 
-.navBar li:hover {
+#navBar li:hover {
     background-color: #434748;
 }
 
-.sideBar {
+#sideBar {
     float: left;
-    padding: 50px 50px 0 0;
+    padding-top: 50px;
+    width: 240px;
 }
 
-.sideBar tr:hover {
+#sideBar tr:hover {
     background-color: rgba(247, 247, 245, 0.8);
 }
 
@@ -62,30 +68,40 @@ td {
     padding: 10px;
 }
 
-#image {
-    width: calc(100% - 293px);
+#content {
     float: right;
+    margin-top: 50px;
+    width: 678px;
+}
+
+#image {
+    box-sizing: border-box;
+    width: 100%;
     border: 1px solid #e2e4de;
-    margin: 50px 0;
 }
 
 #text {
-    clear: both;
     font-family: 'Open Sans', sans-serif;
-}
-
-#text p {
-    width: calc(100% - 400px);
-    margin: 0 54px;
-    float: right;
-    line-height: 23px;
+    margin: 40px 48px 0 48px;
+    line-height: 21px;
+    font-size: 13px;
 }
 
 footer {
     background-color: #e2e4de;
     position: absolute;
-    bottom: 50px;
-    width: calc(100% - 100px);
+    bottom: 0;
+    width: 960px;
+    height: 50px;
+    margin-top: 60px;
+}
+
+#main:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 footer li {
