@@ -39,6 +39,7 @@ footer ul {
 /*still borders v. 1*/
 #navBar li {
     display: inline-block;
+    width: 120px;
     color: #ffffff;
     text-align: center;
     border-left: 1px solid #5a5d5f;
@@ -54,7 +55,7 @@ footer ul {
 /*still borders v. 2*/
 /*#navBar li {
     display: inline-block;
-    width: 11%;
+    width: 120px;
     color: #ffffff;
     text-align: center;
 }
@@ -63,7 +64,7 @@ footer ul {
     background-color: #434748;
     border-left: 1px solid #838383;
     border-right: 1px solid #838383;
-    width: calc(11% - 2px);
+    width: calc(120px - 2px);
 }*/
 
 #navBar a {
