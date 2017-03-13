@@ -72,27 +72,28 @@
 
 <script>
 
-    $('#content').append('<p id="addText">Add more text</p>');
+    $('#content').append('<input type="button" value="<<<<< Add more text" id="addText"> </input>');
 
     var text = $('#addText');
     var letters = $('#text').text();
 
     text.css({
-        "border": "1px solid",
-        "text-align": "center",
-        "background-color": "aqua",
+        "background-color": "#FFE68F",
         "cursor": "pointer",
-        "display": "none"
+        "display": "none",
+        "position": "absolute",
+        "right": "-200px",
+        "border-radius":"100px"
     });
     var addButton = function () {
         text.css({
             "display": "block"
         });
     };
-    setTimeout(addButton, 2000);
+    setTimeout(addButton, 1000);
     clearTimeout(addButton);
     text.click(function () {
-        $('#text').html(letters + '<br>' + letters);
+        $('#text').html(letters + '<br>' + letters + '<br>' + letters);
         text.remove();
     });
     console.log(text)
