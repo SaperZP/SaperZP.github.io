@@ -53,6 +53,7 @@ footer ul {
     visibility: hidden;
     display: block;
     height: 0;
+    margin-bottom: 60px;
     clear: both;
 }
 
