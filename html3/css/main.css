@@ -20,8 +20,7 @@ body {
 
 .header {
     position: relative;
-    margin: 0 34px;
-    padding-top: 13px;
+    padding: 13px 34px 0 34px;
 }
 
 .clearfix:after {
