@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: url("../img/background.jpg");
-    background-position: center;
+    background: url("../img/background.jpg") center;
     background-size: cover;
 }
 
@@ -12,7 +11,7 @@
     height: 35px;
     display: inline-flex;
     justify-content: flex-end;
-    padding: 0px;
+    padding: 0;
     margin: 0;
     list-style-type: none;
     background-color: #005888;
