@@ -390,6 +390,7 @@ main {
 
 main section:nth-child(odd) {
     flex: 1 0 calc(25% - 8px); /*minus margin of :nth-child(2)*/
+    font-size: 12px;
 }
 
 main section:nth-child(2) {
@@ -543,21 +544,16 @@ main section:nth-of-type(3) form input {
 footer {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 40px;
+    justify-content: center;
 }
 
-footer div img {
-    width: 100%;
-}
-
-footer div {
-    flex: 100%;
-}
 
 footer div:nth-of-type(2) {
     min-height: 100px;
     background-color: #0d4262;
     text-align: center;
+    flex: 100%;
 }
 
 footer ul {
