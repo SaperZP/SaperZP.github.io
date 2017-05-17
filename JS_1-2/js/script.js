@@ -1,4 +1,4 @@
-(function () {
+/*(function () {
     "use strict";
     var number = prompt('enter the number'),
         power = prompt('enter the math power');
@@ -14,7 +14,7 @@
     }
 
     console.log(pow(number, power));
-})();
+})();*/
 
 
 (function () {
@@ -26,13 +26,14 @@
     }
 
     var user_name = prompt('enter your name');
+    var result = 'user not in the list';
 
     for (i = 0; i < namesArr.length; i++) {
         if (namesArr[i] === user_name) {
-            alert(user_name + ' access granted!');
-        } else {
-            alert('access denied!!!');
+            result = 'user is on the list!';
+            break;
         }
     }
+    alert(result);
 
 })();
