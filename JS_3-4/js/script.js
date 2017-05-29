@@ -1,85 +1,79 @@
 (function () {
     'use strict';
-
-    var anchor = document.getElementById('test-anchor');
-    var test = {
-        headerText: document.createTextNode('Programming test'),
-        data: {
-            Questions: [
-                {
-                    "Question 1": [
-                        'Answer option 1',
-                        'Answer option 2',
-                        'Answer option 3'
-                    ]
-                },
-                {
-                    "Question 2": [
-                        'Answer option 1',
-                        'Answer option 2',
-                        'Answer option 3'
-                    ]
-                },
-                {
-                    "Question 3": [
-                        'Answer option 1',
-                        'Answer option 2',
-                        'Answer option 3'
-                    ]
+    var anchor = document.getElementById('test-anchor'),
+        test = {
+            data: {
+                title: 'Тест по какой-то теме',
+                questions: [
+                    {
+                        title: 'Вопрос #1',
+                        answers: ['Вариант овтета 1', 'Вариант овтета 2', 'Вариант овтета 3']
+                    },
+                    {
+                        title: 'Вопрос #2',
+                        answers: ['Вариант овтета 1', 'Вариант овтета 2', 'Вариант овтета 3', 'Вариант овтета 4']
+                    },
+                    {
+                        title: 'Вопрос #3',
+                        answers: ['Вариант овтета 1', 'Вариант овтета 2']
+                    }
+                ]
+            },
+            gimmeBlock: function (tagName, className) {
+                var tag = document.createElement(tagName);
+                if (className !== undefined) {
+                    tag.className = className;
                 }
-            ]
-        },
-        gimmeBlock: function (tagName, className) {
-            var tag = document.createElement(tagName);
-            if (className !== undefined) {
-                tag.className = className;
+                return tag;
+            },
+            form: function () {
+                var form = this.gimmeBlock('form', 'container'),
+                    button = this.gimmeBlock('input', 'btn btn-default'),
+                    header = this.gimmeBlock('header', 'row'),
+                    headerDiv = this.gimmeBlock('div', 'page-header col-lg-4 col-lg-offset-4'),
+                    headerH1 = this.gimmeBlock('h1'),
+                    headerText = document.createTextNode(this.data.title);
+
+                headerH1.appendChild(headerText);
+                headerH1.style.textAlign = 'center';
+                headerDiv.appendChild(headerH1);
+                header.appendChild(headerDiv);
+                form.appendChild(header);
+
+                button.setAttribute('type', 'button');
+                button.setAttribute('value', 'Check answers');
+                form.appendChild(button);
+                anchor.appendChild(form);
+
+                for (var i = 0; i < this.data.questions.length; i++) {
+                    form.insertBefore(this.qCreator(
+                        this.data.questions[i].title,
+                        this.data.questions[0].answers[0]
+                    ), form.children[i + 1]);
+                }
+            },
+            qCreator: function (question, answerOption) {
+                var section = this.gimmeBlock('section', 'row'),
+                    sectionDiv = this.gimmeBlock('div', 'col-lg-4'),
+                    sectionH2 = this.gimmeBlock('h2'),
+                    sectionUl = this.gimmeBlock('ul'),
+                    sectionLi = this.gimmeBlock('li'),
+                    sectionLabel = this.gimmeBlock('label'),
+                    sectionInput = this.gimmeBlock('input');
+
+                sectionH2.appendChild(document.createTextNode(question));
+                sectionDiv.appendChild(sectionH2);
+                section.appendChild(sectionDiv);
+                sectionInput.setAttribute('type', 'checkbox');
+                sectionLabel.appendChild(sectionInput);
+                sectionLabel.appendChild(document.createTextNode(answerOption));
+                sectionLi.appendChild(sectionLabel);
+                sectionUl.style.listStyleType = 'none';
+                sectionUl.appendChild(sectionLi);
+                sectionDiv.appendChild(sectionUl);
+                return section;
             }
-            return tag;
-        },
-        header: function () {
-            var header = this.gimmeBlock('header', 'row'),
-                headerDiv = this.gimmeBlock('div', 'page-header col-lg-4 col-lg-offset-4'),
-                headerH1 = this.gimmeBlock('h1');
 
-            headerH1.appendChild(this.headerText);
-            headerDiv.appendChild(headerH1);
-            header.appendChild(headerDiv);
-            anchor.appendChild(header);
-            console.log(anchor)
-        },
-        section: function () {
-            var section = this.gimmeBlock('section', 'row'),
-                sectionDiv = this.gimmeBlock('div', 'col-lg-4'),
-                sectionH2 = this.gimmeBlock('h2'),
-                sectionUl = this.gimmeBlock('ul'),
-                sectionLi = this.gimmeBlock('li'),
-                sectionLabel = this.gimmeBlock('label'),
-                sectionInput = this.gimmeBlock('input');
-
-            for (var key in test.data.Questions[0]) {
-            }
-            sectionH2.appendChild(document.createTextNode(key));
-            sectionDiv.appendChild(sectionH2);
-            section.appendChild(sectionDiv);
-
-
-            for(var i=0; i< test.data.Questions[0]['Question 1'].length; i++){
-                console.log(section);
-            }
-
-            sectionInput.setAttribute('type', 'checkbox');
-            sectionLabel.appendChild(sectionInput);
-            sectionLi.appendChild(sectionLabel);
-            sectionUl.appendChild(sectionLi);
-            sectionDiv.appendChild(sectionUl);
-            anchor.appendChild(section);
-
-
-        }
-
-
-    };
-    test.section();
-
-
+        };
+    test.form();
 })();
