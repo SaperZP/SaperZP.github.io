@@ -47,12 +47,14 @@
 
                 for (var i = 0; i < this.data.questions.length; i++) {
                     form.insertBefore(this.qCreator(
-                        this.data.questions[i].title,
-                        this.data.questions[0].answers[0]
-                    ), form.children[i + 1]);
+                        this.data.questions[0].title,
+                        this.data.questions[0].answers[0],
+                        i
+                    ), form.children[i+1]);
                 }
+
             },
-            qCreator: function (question, answerOption) {
+            qCreator: function (question, answerOption, iValue) {
                 var section = this.gimmeBlock('section', 'row'),
                     sectionDiv = this.gimmeBlock('div', 'col-lg-4'),
                     sectionH2 = this.gimmeBlock('h2'),
@@ -70,6 +72,11 @@
                 sectionLi.appendChild(sectionLabel);
                 sectionUl.style.listStyleType = 'none';
                 sectionUl.appendChild(sectionLi);
+
+                for (var i = 0; i < (this.data.questions[iValue].answers.length) - 1; i++) {
+                    sectionUl.appendChild(sectionLi.cloneNode(true));
+                }
+
                 sectionDiv.appendChild(sectionUl);
                 return section;
             }
