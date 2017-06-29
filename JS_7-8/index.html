@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js 7-8</title>
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="tabs-panel">
+        <ul class="tabs-panel__list">
+            <li class="tabs-panel__item"><a class="tabs-panel__link" href="#">Tab #1</a></li>
+            <li class="tabs-panel__item"><a class="tabs-panel__link" href="#">Tab #2</a></li>
+            <li class="tabs-panel__item"><a class="tabs-panel__link" href="#">Tab #3</a></li>
+        </ul>
+
+        <article class="tabs-panel__content visible">
+            <p class="tabs-panel__paragraph">
+                1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia porro similique vero voluptate
+                voluptates! Accusamus aliquid animi assumenda deleniti facilis minima, natus nesciunt, omnis porro quas
+                rem repellat temporibus ullam?
+            </p>
+        </article>
+
+        <article class="tabs-panel__content">
+            <p class="tabs-panel__paragraph">
+                2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia porro similique vero voluptate
+                voluptates! Accusamus aliquid animi assumenda deleniti facilis minima, natus nesciunt, omnis porro quas
+                rem repellat temporibus ullam?
+            </p>
+        </article>
+
+        <article class="tabs-panel__content">
+            <p class="tabs-panel__paragraph">
+                3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia porro similique vero voluptate
+                voluptates! Accusamus aliquid animi assumenda deleniti facilis minima, natus nesciunt, omnis porro quas
+                rem repellat temporibus ullam?
+            </p>
+        </article>
+
+    </div>
+
+
+    <form action="" class="form">
+        <fieldset>
+            <div class="form__item">
+                <label class="form__label" for="firstname">Firstname</label>
+                <input class="form__input" id="firstname" name="firstname" data-title="Please provide your firstname.">
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="lastname">Lastname</label>
+                <input class="form__input" id="lastname" name="lastname" data-title="Please provide also your lastname.">
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="address">Address</label>
+                <input class="form__input" id="address" name="address" data-title="Your home or work address.">
+            </div>
+
+            <input type="button" class="form__button" value="Show help">
+        </fieldset>
+    </form>
+</div>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
