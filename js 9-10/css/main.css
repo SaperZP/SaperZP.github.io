@@ -1,0 +1,59 @@
+.wrapper{
+    width: 640px;
+    margin: 0 auto 50px;
+}
+
+/*checkbox jQuery styles*/
+.checkGroup{
+    margin-top: 20px;
+    border: 1px dotted;
+    background: #5083e8;
+}
+.niceCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../img/checkbox-sprite.png);
+    overflow: hidden;
+}
+.niceChecked {
+    background-position: 0 -17px;
+}
+.niceCheck input {
+    margin-left: -100px; /* можно задать побольше чтобы наверняка скрыть поле */
+}
+.niceCheckDisabled {
+    background-image: url(../img/checkbox-disabled.png);
+}
+
+
+/*checkbox CSS3 styles*/
+
+div.css3 input[type=checkbox] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+div.css3 label {
+    cursor: pointer;
+}
+div.css3 label:after {
+    content: " ";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(../img/checkbox-sprite.png);
+    position: relative;
+    top: 3px;
+    margin-left: 15px;
+}
+div.css3 input[type=checkbox]:checked + label:after {
+    background-position: 0 -17px;
+}
+div.css3 label:hover:after {
+    background-position: 0 -34px;
+}
+div.css3 input[type=checkbox]:checked + label:hover:after {
+    background-position: 0 -51px;
+}
+

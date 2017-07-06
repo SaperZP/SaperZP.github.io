@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js 9-10</title>
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/jCarousel.css">
+    <link rel="stylesheet" href="css/ikSelect.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="jcarousel">
+        <ul>
+            <li><img src="img/1.jpg" alt="1"></li>
+            <li><img src="img/2.jpg" alt="2"></li>
+            <li><img src="img/3.jpg" alt="3"></li>
+        </ul>
+    </div>
+
+    <!-- Controls -->
+    <a class="jcarousel-prev" href="#">Prev</a>
+    <a class="jcarousel-next" href="#">Next</a>
+
+    <!-- Pagination -->
+    <div class="jcarousel-pagination">
+        <!-- Pagination items will be generated in here -->
+    </div>
+
+
+    <div class="connected-carousels">
+        <div class="stage">
+            <div class="carousel carousel-stage">
+                <ul>
+                    <li><img src="img/1.jpg" alt="1"></li>
+                    <li><img src="img/2.jpg" alt="2"></li>
+                    <li><img src="img/3.jpg" alt="3"></li>
+                </ul>
+            </div>
+            <a href="#" class="prev prev-stage"><span>&lsaquo;</span></a>
+            <a href="#" class="next next-stage"><span>&rsaquo;</span></a>
+        </div>
+
+        <div class="navigation">
+            <a href="#" class="prev prev-navigation">&lsaquo;</a>
+            <a href="#" class="next next-navigation">&rsaquo;</a>
+            <div class="carousel carousel-navigation">
+                <ul>
+                    <li><img src="img/1.jpg" alt="1"></li>
+                    <li><img src="img/2.jpg" alt="2"></li>
+                    <li><img src="img/3.jpg" alt="3"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <select>
+        <option>Болгария</option>
+        <option>Польша</option>
+        <option>Германия</option>
+    </select>
+
+    <div class="checkGroup">
+        <h4>Jquery checkbox</h4>
+        <div>
+            <label for="ch1">label 1</label><input type="checkbox" class="niceCheck" id="ch1" tabindex="1"/>
+        </div>
+        <div>
+            <label for="ch2">label 2</label><input type="checkbox" class="niceCheck" checked="checked" id="ch2" tabindex="2" value="2"/>
+        </div>
+        <div>
+            <label for="ch3">label 3</label><input type="checkbox" class="niceCheck" id="ch3" checked="checked" disabled="disabled"/>
+        </div>
+    </div>
+
+    <div class="checkGroup css3">
+        <h4>CSS3 checkbox</h4>
+        <input type="checkbox" id="test-check1"/>
+        <label for="test-check1">Чекбокс 1:</label>
+        <input type="checkbox" id="test-check2"/>
+        <label for="test-check2">Чекбокс 2:</label>
+    </div>
+
+</div>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jCarousel/jquery.jcarousel.min.js"></script>
+<script src="js/jquery.ikSelect.min.js"></script>
+<script src="js/customCheckbox.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
