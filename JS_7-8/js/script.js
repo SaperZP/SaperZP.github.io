@@ -29,15 +29,17 @@
             $(this).next().hide()
         });
 
-    $input.focus(function () {
-        $(this).next().text($(this).attr('data-title')).show().fadeOut(5000);
-    });
+    $input.focus(showHint);
 
     $button.click(function () {
-        $input.each(function () {
-            $(this).next().text($(this).attr('data-title')).show().fadeOut(5000);
-        })
-    })
+        $input.each(showHint)
+    });
+
+    function showHint () {
+        $(this).next().text($(this).attr('data-title')).show().fadeOut(5000);
+        return $(this)
+    }
+
 
 
 })();
