@@ -1,0 +1,64 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.wrapper{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.carousel{
+    max-width: 791px;
+    margin: auto;
+}
+
+.carousel__hider {
+    width: 600px;
+    overflow: hidden;
+    float: left;
+}
+
+.carousel__list {
+    list-style: none;
+    width: 10000px;
+    padding: 0;
+    position: relative;
+}
+
+.carousel__element {
+    display: block;
+    margin-right: 25px;
+    float: left;
+}
+
+.carousel__img {
+    max-width: 100px;
+}
+
+.carousel__arrow--left,
+.carousel__arrow--right {
+    float: left;
+    display: block;
+    border: 1px solid grey;
+    background-color: lightgrey;
+    padding: 5px;
+    margin-top: 50px;
+}
+
+.carousel__arrow--left:hover,
+.carousel__arrow--right:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+.carousel__arrow--left {
+    margin-right: 25px;
+}
+
+.carousel__arrow--right {
+    margin-left: 25px;
+}
